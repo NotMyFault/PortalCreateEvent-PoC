@@ -23,3 +23,4 @@ jobs:
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           files: build/libs/*-SNAPSHOT.jar
+          release-tag: ${{ github.event.release.tag_name }}
