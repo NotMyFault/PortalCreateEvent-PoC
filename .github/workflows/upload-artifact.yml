@@ -19,7 +19,7 @@ jobs:
       - name: Clean Build
         run: ./gradlew clean build
       - name: Archive Artifacts
-        uses: actions/upload-artifact@v3
+        uses: AButler/upload-release-assets@v2.0
         with:
-          name: PortalCreateEventPoC-SNAPSHOT
-          path: build/libs/*-SNAPSHOT.jar
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          files: build/libs/*-SNAPSHOT.jar
