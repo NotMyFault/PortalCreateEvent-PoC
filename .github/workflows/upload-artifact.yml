@@ -19,7 +19,7 @@ jobs:
       - name: Clean Build
         run: ./gradlew clean build
       - name: Archive Artifacts
-        uses: AButler/upload-release-assets@v2.0
+        uses: AButler/upload-release-assets@v2
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           files: build/libs/*-SNAPSHOT.jar
